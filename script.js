@@ -30,3 +30,19 @@ gsap.from(".second-p1",{
     duration:1,
     opacity:0,
 })
+
+let navmenu = document.getElementsByClassName("navmenu")[0];
+let navlink = navmenu.getElementsByClassName("navmenu a")[0];
+let nav_page = document.getElementsByClassName("nav-page")[0];
+let count = 0;
+
+navmenu.addEventListener("click", function () {
+  if (count === 0) {
+    nav_page.style.display = "block";
+    count++;
+  } else {
+    nav_page.style.display = "none";
+    count = 0;
+  }
+});
+
